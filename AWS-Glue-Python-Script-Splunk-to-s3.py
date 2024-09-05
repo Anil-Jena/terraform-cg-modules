@@ -23,7 +23,8 @@ SPLUNK_QUERY_1 = 'search index="itsi_grouped_alerts" earliest=-180m AND latest=n
 SPLUNK_QUERY_2 = 'search index="app_snow_ticket_updates" earliest=-180m AND latest=now | table  *'
 
 # S3 configuration
-S3_BUCKET = 'dop-datarepo-prod-test-bucket'
+#S3_BUCKET = 'dop-datarepo-prod-test-bucket'
+S3_BUCKET = 'da-dop-ew1-0bc7-prod-eu-datarepo-qliksense-raw'
 
 # Fetch the current timestamp
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
