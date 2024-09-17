@@ -19,8 +19,14 @@ SPLUNK_HOST = 'ip-10-84-148-51.0bc7-dop-aiops-lan.aws.cloud.airbus.corp'
 SPLUNK_PORT = 8089
 SPLUNK_USERNAME = 'data_repo2'
 SPLUNK_PASSWORD = 'L6tm64n@a13ps'
-SPLUNK_QUERY_1 = 'search index="itsi_grouped_alerts" earliest=-180m AND latest=now | table  *'
-SPLUNK_QUERY_2 = 'search index="app_snow_ticket_updates" earliest=-180m AND latest=now | table  *'
+##Splunk query for retrive data from past 3hours
+#SPLUNK_QUERY_1 = 'search index="itsi_grouped_alerts" earliest=-180m AND latest=now | table  *'
+#SPLUNK_QUERY_2 = 'search index="app_snow_ticket_updates" earliest=-180m AND latest=now | table  *'
+
+#Splunk query for retrive data from past 15days
+SPLUNK_QUERY_1 = 'search index="itsi_grouped_alerts" earliest=-15d@d AND latest=now | table  *'
+SPLUNK_QUERY_2 = 'search index="app_snow_ticket_updates" earliest=-15d@d AND latest=now | table  *'
+
 
 # S3 configuration
 #S3_BUCKET = 'dop-datarepo-prod-test-bucket'
